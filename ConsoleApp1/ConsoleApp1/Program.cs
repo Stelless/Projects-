@@ -25,9 +25,6 @@ namespace ConsoleApp1
         int rows;
         int columns;
 
-        int[] rowVal;
-        int[] colVal;
-
         int[,] matrix;
 
         // CONSTRUCTOR
@@ -35,8 +32,7 @@ namespace ConsoleApp1
         {
             rows = _rows;
             columns = _columns;
-            rowVal = new int[_rows];
-            colVal = new int[_columns];
+
             matrix = new int[_rows, _columns];
 
 
@@ -68,17 +64,14 @@ namespace ConsoleApp1
             // Cycles through the rows one at a time entering all of the columns data at once then moving onto the next row.
             for (int i = 0; i < rows; i++)
             {
-
+                Console.WriteLine("_________"); // change this to hve a for loop that reads in how many digits the matrix is to fit it to exact size
                 for (int j = 0; j < columns; j++)
                 {
-                    // Console.WriteLine(matrix[i,j]);
                     Console.Write(matrix[i, j] + " ");
                 }
                 Console.WriteLine();
             }
-
             Console.WriteLine("End Function");
-
         }
     }
 }
